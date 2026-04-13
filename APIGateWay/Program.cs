@@ -9,12 +9,12 @@ builder.Services.AddControllers();
 
 builder.Configuration.AddJsonFile("Ocelot.json");
 
-builder.Services.AddOcelot()
-    .AddDelegatingHandler(() => new HttpClientHandler
-    {
-        ServerCertificateCustomValidationCallback =
-            HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
-    }, true);
+builder.Services.AddOcelot();
+    //.AddDelegatingHandler(() => new HttpClientHandler
+    //{
+    //    ServerCertificateCustomValidationCallback =
+    //        HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
+    //}, true);
 builder.Services.AddAuthentication("Bearer")
     .AddJwtBearer("Bearer", options =>
     {
