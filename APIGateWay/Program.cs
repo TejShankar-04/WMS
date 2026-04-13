@@ -10,6 +10,7 @@ builder.Services.AddControllers();
 builder.Configuration.AddJsonFile("Ocelot.json");
 
 builder.Services.AddOcelot();
+
     //.AddDelegatingHandler(() => new HttpClientHandler
     //{
     //    ServerCertificateCustomValidationCallback =
