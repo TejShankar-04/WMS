@@ -1,0 +1,6 @@
+@ItemMaster_HostAddress = http://localhost:5222
+
+GET {{ItemMaster_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
