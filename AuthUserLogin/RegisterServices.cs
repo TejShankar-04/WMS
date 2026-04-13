@@ -11,6 +11,7 @@ namespace AuthUserLogin
         public static void AddAuthServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<AuthDbClass>(Options => Options.UseSqlServer(configuration.GetConnectionString("AuthDbConnection")));
+           
             services.AddScoped<IAuthDbClass, AuthDbClass>();
             services.AddScoped<ITokenServices, TokenServices>();
         }
