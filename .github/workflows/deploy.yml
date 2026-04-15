@@ -50,5 +50,5 @@ jobs:
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'wmsapp123-cgdgbchkbmb5haea'
+          app-name: 'wmsapp123'
           package: .
