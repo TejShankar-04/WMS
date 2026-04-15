@@ -60,7 +60,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'wms-api-tej123'
+          app-name: 'wmsapp124-avbhgxezg8ccaxeq'
           slot-name: 'Production'
           package: .
           
