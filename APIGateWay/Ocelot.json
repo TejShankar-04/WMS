@@ -2,45 +2,42 @@
   "Routes": [
     {
       "DownstreamPathTemplate": "/api/Auth/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 7076
+          "Host": "auth-service",
+          "Port": 5001
         }
       ],
       "UpstreamPathTemplate": "/api/Auth/{everything}",
-      "UpstreamHttpMethod": [ "POST", "GET" ],
-      "DangerousAcceptAnyServerCertificateValidator": true
+      "UpstreamHttpMethod": [ "GET", "POST" ]
     },
     {
       "DownstreamPathTemplate": "/api/PO/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 7130
+          "Host": "po-service",
+          "Port": 5002
         }
       ],
       "UpstreamPathTemplate": "/api/PO/{everything}",
-      "UpstreamHttpMethod": [ "GET", "POST" ],
-      "DangerousAcceptAnyServerCertificateValidator": true
+      "UpstreamHttpMethod": [ "GET", "POST" ]
     },
     {
       "DownstreamPathTemplate": "/api/Item/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 7048
+          "Host": "item-service",
+          "Port": 5003
         }
       ],
       "UpstreamPathTemplate": "/api/Item/{everything}",
-      "UpstreamHttpMethod": [ "GET", "POST" ],
-      "DangerousAcceptAnyServerCertificateValidator": true
+      "UpstreamHttpMethod": [ "GET", "POST" ]
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://localhost:7109"
+    "BaseUrl": "http://localhost:7000"
   }
 }
